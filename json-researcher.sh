@@ -12,7 +12,7 @@ curl -s https://01.gritlab.ax/assets/superhero/all.json | \
   # Filter output to show only name and power lines
   # -E   : extended regex
   # (name|power) : match lines containing either word
-  grep -E '(name|.power)'
+  grep -E '(name|power)'
 
 # Pipe explanation:
 # curl → fetches raw JSON from URL
