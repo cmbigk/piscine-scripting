@@ -7,12 +7,12 @@ curl -s https://01.gritlab.ax/assets/superhero/all.json | \
   # .[]           : iterate through each array element
   # select(.id == 1) : filter to keep only hero with id: 1
   # {name, power} : extract only name and power fields
-  jq '.[] | select(.id == 1) | {name, power}' | \
+  jq '.[] | select(.id == 1) | {name, powerstats}' | \
   
   # Filter output to show only name and power lines
   # -E   : extended regex
   # (name|power) : match lines containing either word
-  grep -E '(name|power)'
+  grep -E '(name|.power)'
 
 # Pipe explanation:
 # curl → fetches raw JSON from URL
