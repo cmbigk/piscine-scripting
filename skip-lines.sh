@@ -7,4 +7,4 @@
 #Repeat: p prints line 3, n skips line 4, etc.
 
 
-ls -l | sed -n 'p;n'
+ls -l | sed -n 'n;p'
