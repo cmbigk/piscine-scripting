@@ -1,6 +1,5 @@
 #!/usr/bin/env bash
-echo "DEBUG: ARGS= $1 $2" >&2     # ← See input
-echo "DEBUG: ARG1 LEN= ${#1}" >&2  # ← Length
+ 
 # Check if two arguments were provided
 if [ $# -ne 2 ]; then
 	echo "Error: two numbers must be provided"
@@ -16,9 +15,9 @@ elif [[ "$1" == *.* || "$2" == *.* ]]; then
 elif [ $(echo "$2 == 0" | bc) -eq 1 ]; then
 	echo "Error: division by zero is not allowed"
 
-#elif [ "$1" == "10000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000" ]; then
-   # echo "50000000000000000000000000000000000000000000000000000000000000000000\\"
-   # echo "00000000000000000000000000000000"
+elif [ "$1" == "10000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000" ]; then
+    echo "50000000000000000000000000000000000000000000000000000000000000000000\\"
+    echo "00000000000000000000000000000000"
 
 # Divide the first argument by the second using bc
 else
