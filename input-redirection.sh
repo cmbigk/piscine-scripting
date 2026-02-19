@@ -8,4 +8,3 @@ The current user is: \$USERNAME
 EOF
 " > show-info.sh
 
-chmod +x show-info.shs
