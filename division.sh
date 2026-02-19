@@ -1,0 +1,3 @@
+#!/bin/sh
+result=$(expr $1 / $2)
+echo $result
