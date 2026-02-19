@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
-
+echo "DEBUG: ARGS= $1 $2" >&2     # ← See input
+echo "DEBUG: ARG1 LEN= ${#1}" >&2  # ← Length
 # Check if two arguments were provided
 if [ $# -ne 2 ]; then
 	echo "Error: two numbers must be provided"
