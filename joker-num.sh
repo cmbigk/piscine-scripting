@@ -7,11 +7,12 @@ fi
 
 for (( tries=5; tries>0; tries-- )); do
   while true; do
-    if [ "$tries" -eq 1 ]; then
+  
+  if [ "$tries" -eq 0 ]; then
   read -p "Enter your guess (1 try left): " guess
-else
+  else
   read -p "Enter your guess ($tries tries left): " guess
-fi
+  fi
 
     [[ "$guess" =~ ^[0-9]+$ ]] && break  # Valid → exit inner loop
   done
