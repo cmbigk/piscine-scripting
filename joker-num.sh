@@ -13,7 +13,7 @@ for (( tries_left=5; tries_left>0; tries_left-- )); do
   
   # Get valid guess (retry on invalid)
   while true; do
-    read -p "Enter your guess ($tries_left tries left): " guess
+    read -p "Enter your guess ($tries_left tries left):" guess
     
     # Retry if empty or not number
     if [[ -z "$guess" || ! "$guess" =~ ^[0-9]+$ ]]; then
