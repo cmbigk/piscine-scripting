@@ -2,7 +2,7 @@
 
 SECRET="$1"
 if [ $# -ne 1 ] || ! [[ "$SECRET" =~ ^[0-9]+$ ]] || [ "$SECRET" -lt 1 ] || [ "$SECRET" -gt 100 ]; then
-  echo "Error: wrong argument" >&2; exit 1
+  echo "Error: wrong argument" ; exit 1
 fi
 
 for (( tries=5; tries>0; tries-- )); do
