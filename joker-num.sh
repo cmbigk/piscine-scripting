@@ -11,7 +11,7 @@ for (( tries=5; tries>0; tries-- )); do
     read guess
       if [[ "$guess" =~ ^[0-9]+$ ]] && [ "$guess" -ge 1 ] && [ "$guess" -le 100 ]; then
     break
-  fi
+    fi
   done
 
   if [ "$guess" -gt "$SECRET" ]; then
