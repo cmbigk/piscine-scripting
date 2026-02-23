@@ -10,7 +10,7 @@ for (( tries=5; tries>0; tries-- )); do
   echo $tries
   
   if [ "$tries" -eq 1 ]; then
-  read -p "Enter your guess (1 try left): " guess
+  read -p "Enter your guess (1 tries left): " guess
   else
   read -p "Enter your guess ($tries tries left): " guess
   fi
