@@ -9,7 +9,9 @@ for (( tries=5; tries>0; tries-- )); do
   while true; do
     echo "Enter your guess ($tries tries left):"   # ← stdout now
     read guess
-    [[ "$guess" =~ ^[0-9]+$ ]] && break
+      if [[ "$guess" =~ ^[0-9]+$ ]] && [ "$guess" -ge 1 ] && [ "$guess" -le 100 ]; then
+    break
+  fi
   done
 
   if [ "$guess" -gt "$SECRET" ]; then
