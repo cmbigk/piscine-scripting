@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Check number of arguments
-if [ "$#" -ne 1 ]; then
+if [ $# -ne 1 ]; then
     echo "Error"
     exit 1
 fi
